@@ -6,7 +6,7 @@ This project provides a detailed visualization of developer activities, includin
 
 ![Dashboard Logo](D2.png)
 
-##Features
+## Features
 ✅Line Chart: Displays the developer activities over time, allowing you to track trends and patterns.
 ✅Bar Chart: Provides a segmented view of different activities over the selected date range.
 ✅Pie Chart: Offers a proportional view of the overall contributions of different activities within the selected date range.
