@@ -2,9 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Dashboard Logo](assets/D1.png)
+![Dashboard Logo](D1.png)
 
-![Dashboard Logo](assets/D2.png)
+![Dashboard Logo](D2.png)
 
 ## Available Scripts
 
