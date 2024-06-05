@@ -1,10 +1,17 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project provides a detailed visualization of developer activities, including commits, pull requests, merges, meetings, and documentation, over a specified date range. The data is fetched from an API and displayed using various types of charts for easy analysis.
 
 ![Dashboard Logo](D1.png)
 
 ![Dashboard Logo](D2.png)
+
+##Features
+✅Line Chart: Displays the developer activities over time, allowing you to track trends and patterns.
+✅Bar Chart: Provides a segmented view of different activities over the selected date range.
+✅Pie Chart: Offers a proportional view of the overall contributions of different activities within the selected date range.
+✅Date Filters: Allows you to specify a start and end date to view activities within a custom range.
+✅Summary Statistics: Displays the total counts for each activity type within the selected date range.
 
 ## Available Scripts
 
