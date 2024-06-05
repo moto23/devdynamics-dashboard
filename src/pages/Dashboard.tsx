@@ -78,7 +78,7 @@ const Dashboard: React.FC = () => {
           
         </div>
          <div>
-        <h5>Please select dates from June 1, 2024, to June 8, 2024, to view the data analytics.</h5>
+        <h5>Please select dates from June 1, 2024, to June 8, 2024, to view the weekly Data Analytics</h5>
         </div>
         <div className="summary">
           <h2>Summary Statistics</h2>
