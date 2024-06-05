@@ -19,10 +19,7 @@ const Navbar: React.FC = () => {
     <>
     <div className={`app ${darkMode ? 'dark-mode' : ''}`}></div>
       <div className="topbar">
-{/*         <div className="search">
-          <FontAwesomeIcon icon={faSearch} />
-          <input type="text" placeholder="Search..." />
-        </div> */}
+
         <div className="profile">
           <button className="dark-mode-button" onClick={toggleDarkMode}>
             <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
@@ -39,8 +36,10 @@ const Navbar: React.FC = () => {
         </div>
         <ul className="sidebar-nav">
           <li className="nav-item"><Link to="/" className="nav-link"><FontAwesomeIcon icon={faTachometerAlt} /> Dashboard</Link></li>
-          <li className="nav-item"><Link to="/settings" className="nav-link"><FontAwesomeIcon icon={faCogs} /> Settings</Link></li>
+{/*           <li className="nav-item"><Link to="/settings" className="nav-link"><FontAwesomeIcon icon={faCogs} /> Settings</Link></li>
           <li className="nav-item"><Link to="/account" className="nav-link"><FontAwesomeIcon icon={faUser} /> Account</Link></li>
+          <li className="nav-item"><Link to="/signup" className="nav-link"><FontAwesomeIcon icon={faUserPlus} /> Sign Up</Link></li> */}
+           <li className="nav-item"><Link to="/settings" className="nav-link"><FontAwesomeIcon icon={faCogs} /> Settings</Link></li>
           <li className="nav-item"><Link to="/signup" className="nav-link"><FontAwesomeIcon icon={faUserPlus} /> Sign Up</Link></li>
           <div className="help" style={{ cursor: 'pointer' }}>Need Help? Contact</div>
         </ul>
