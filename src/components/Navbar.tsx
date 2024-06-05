@@ -19,10 +19,10 @@ const Navbar: React.FC = () => {
     <>
     <div className={`app ${darkMode ? 'dark-mode' : ''}`}></div>
       <div className="topbar">
-        <div className="search">
+{/*         <div className="search">
           <FontAwesomeIcon icon={faSearch} />
           <input type="text" placeholder="Search..." />
-        </div>
+        </div> */}
         <div className="profile">
           <button className="dark-mode-button" onClick={toggleDarkMode}>
             <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
