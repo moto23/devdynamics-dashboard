@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTachometerAlt, faCogs, faUser, faUserPlus, faSearch, faBell, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faTachometerAlt, faCogs, faUser, faUserPlus, faBell, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
