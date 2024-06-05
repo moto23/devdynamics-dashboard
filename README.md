@@ -7,11 +7,11 @@ This project provides a detailed visualization of developer activities, includin
 ![Dashboard Logo](D2.png)
 
 ## Features
-✅Line Chart: Displays the developer activities over time, allowing you to track trends and patterns.
-✅Bar Chart: Provides a segmented view of different activities over the selected date range.
-✅Pie Chart: Offers a proportional view of the overall contributions of different activities within the selected date range.
-✅Date Filters: Allows you to specify a start and end date to view activities within a custom range.
-✅Summary Statistics: Displays the total counts for each activity type within the selected date range.
+### Line Chart: Displays the developer activities over time, allowing you to track trends and patterns.
+### Bar Chart: Provides a segmented view of different activities over the selected date range.
+### Pie Chart: Offers a proportional view of the overall contributions of different activities within the selected date range.
+### Date Filters: Allows you to specify a start and end date to view activities within a custom range.
+### Summary Statistics: Displays the total counts for each activity type within the selected date range.
 
 ## Available Scripts
 
