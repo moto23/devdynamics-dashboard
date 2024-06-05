@@ -75,6 +75,10 @@ const Dashboard: React.FC = () => {
             End Date:
             <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
           </label>
+          
+        </div>
+         <div>
+        <h5>Please select dates from June 1, 2024, to June 8, 2024, to view the data analytics.</h5>
         </div>
         <div className="summary">
           <h2>Summary Statistics</h2>
