@@ -1,4 +1,4 @@
-// src/pages/SignUp.tsx
+
 import React, { useState } from 'react';
 import './SignUp.css';
 
@@ -14,7 +14,7 @@ const SignUp: React.FC = () => {
       alert('Passwords do not match');
       return;
     }
-    // Handle sign-up logic
+    
     console.log('User signed up:', { username, email, password });
   };
 
