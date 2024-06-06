@@ -122,6 +122,7 @@ body.dark-mode .topbar .profile svg {
   width: 100%;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .sidebar-brand .logo {
