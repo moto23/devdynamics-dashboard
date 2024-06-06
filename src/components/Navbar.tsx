@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTachometerAlt, faCogs, faUser, faUserPlus, faBell, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faTachometerAlt,  faUser, faUserPlus, faBell, faMoon, faSun,faBuilding } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
+
 
 const Navbar: React.FC = () => {
   const [isSidebarOpen] = useState(true);
@@ -31,12 +32,14 @@ const Navbar: React.FC = () => {
         
       </div>
       <nav className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
-        <div className="sidebar-brand">
-          <FontAwesomeIcon icon={faTachometerAlt} className="logo" /> Dashboard
-        </div>
+      <div className="sidebar-brand">
+      
+        <FontAwesomeIcon icon={faTachometerAlt} className="logo" /> DevDynamics
+      
+    </div>
         <ul className="sidebar-nav">
           <li className="nav-item"><Link to="/" className="nav-link"><FontAwesomeIcon icon={faTachometerAlt} /> Dashboard</Link></li>
-           <li className="nav-item"><Link to="/settings" className="nav-link"><FontAwesomeIcon icon={faCogs} /> Settings</Link></li>
+          <li className="nav-item"><Link to="/companies" className="nav-link"><FontAwesomeIcon icon={faBuilding} /> Companies</Link></li>
           <li className="nav-item"><Link to="/signup" className="nav-link"><FontAwesomeIcon icon={faUserPlus} /> Sign Up</Link></li>
           <div className="help" style={{ cursor: 'pointer' }}>Need Help? Contact</div>
         </ul>
