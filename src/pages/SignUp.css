@@ -1,7 +1,7 @@
 
 .signup-container {
-  padding: 40px;
-    background-color: #f8f9fa;
+  padding: 20px;
+  background-color: #f8f9fa;
 }
 
 .signup-container h1{
@@ -13,19 +13,19 @@
 
 
 .signup-form {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
-  margin-bottom: 90px;
-  margin-right:200px;
+  margin-bottom: 20px;
+  margin-right:240px;
 }
 
 .form-group {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   
 }
 
 .signup-form h1 {
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 .form-group label {
