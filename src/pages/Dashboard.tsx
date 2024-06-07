@@ -64,14 +64,14 @@ const Dashboard: React.FC = () => {
       acc.merges += cur.merges;
       acc.meetings += cur.meetings;
       acc.documentation += cur.documentation;
-      acc.contributorCount = acc.contributors.size;
       acc.contributors.add(cur.contributor || 'Unknown');
       return acc;
     },
-    { commits: 0, pullRequests: 0, merges: 0, meetings: 0, documentation: 0, contributors: new Set<string>(),contributorCount: 0 }
+    { commits: 0, pullRequests: 0, merges: 0, meetings: 0, documentation: 0, contributors: new Set<string>() }
   );
 
- 
+  const contributorCount = summary.contributors.size;
+
   const groupedData = filteredContributorData.reduce((acc: Record<string, Record<string, GroupedActivity>>, cur) => {
     const date = new Date(cur.time).toISOString().split('T')[0];
     if (!acc[date]) acc[date] = {};
@@ -90,8 +90,6 @@ const Dashboard: React.FC = () => {
   if (error) {
     return <div>{error}</div>;
   }
-  summary.contributorCount = contributors.length; 
-
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8'];
 
@@ -118,7 +116,7 @@ const Dashboard: React.FC = () => {
               ))}
             </select>
           </label>
-        </div> 
+        </div>
         <div>
           <h5>Select dates from June 1, 2024, to June 8, 2024, and Contributor Name to view the weekly\daywise Data Analytics</h5>
         </div>
@@ -133,8 +131,6 @@ const Dashboard: React.FC = () => {
                 <th>Meetings</th>
                 <th>Documentation</th>
                 <th>Contributors</th>
-
-              
               </tr>
             </thead>
             <tbody>
@@ -144,7 +140,7 @@ const Dashboard: React.FC = () => {
                 <td>{summary.merges}</td>
                 <td>{summary.meetings}</td>
                 <td>{summary.documentation}</td>
-                <td>{summary.contributorCount}</td>
+                <td>{contributorCount}</td>
               </tr>
             </tbody>
           </table>
@@ -190,7 +186,7 @@ const Dashboard: React.FC = () => {
                     { name: 'Merges', value: summary.merges },
                     { name: 'Meetings', value: summary.meetings },
                     { name: 'Documentation', value: summary.documentation },
-                    { name: 'Contributors', value: summary.contributors.size }
+                    { name: 'Contributors', value: contributorCount }
                   ]}
                   cx="50%"
                   cy="50%"
@@ -204,12 +200,10 @@ const Dashboard: React.FC = () => {
                     { name: 'Merges', value: summary.merges },
                     { name: 'Meetings', value: summary.meetings },
                     { name: 'Documentation', value: summary.documentation },
-                    { name: 'Contributors', value: summary.contributors.size }
-                    // Use contributor count
+                    { name: 'Contributors', value: contributorCount }
                   ].map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
-
                 </Pie>
                 <Tooltip />
                 <Legend />
@@ -218,31 +212,31 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
         <div>
-        <h2>Contributors Daywise Activity</h2>
+          <h2>Contributors Daywise Activity</h2>
         </div>
         <div className="contributor-charts">
-  {Object.entries(groupedData).map(([date, contributors]) => (
-    <div key={date}>
-      {Object.entries(contributors).map(([contributor, activity]) => (
-        <div key={contributor}>
-          <h3>Activity of {contributor} for {date}</h3>
-          <div className="bar-chart">
-            <BarChart width={800} height={300} data={[activity]}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="commits" fill="#8884d8" />
-              <Bar dataKey="pullRequests" fill="#82ca9d" />
-              <Bar dataKey="merges" fill="#ffc658" />
-              <Bar dataKey="meetings" fill="#ff7300" />
-              <Bar dataKey="documentation" fill="#0088FE" />
-            </BarChart>
-          </div>
-        </div>
-      ))}
-    </div>
+          {Object.entries(groupedData).map(([date, contributors]) => (
+            <div key={date}>
+              {Object.entries(contributors).map(([contributor, activity]) => (
+                <div key={contributor}>
+                  <h3>Activity of {contributor} for {date}</h3>
+                  <div className="bar-chart">
+                    <BarChart width={800} height={300} data={[activity]}>
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <Tooltip />
+                      <Legend />
+                      <Bar dataKey="commits" fill="#8884d8" />
+                      <Bar dataKey="pullRequests" fill="#82ca9d" />
+                      <Bar dataKey="merges" fill="#ffc658" />
+                      <Bar dataKey="meetings" fill="#ff7300" />
+                      <Bar dataKey="documentation" fill="#0088FE" />
+                    </BarChart>
+                  </div>
+                </div>
+              ))}
+            </div>
           ))}
         </div>
       </div>
