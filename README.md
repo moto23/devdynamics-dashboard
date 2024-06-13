@@ -23,12 +23,22 @@ This project provides a detailed visualization of developer activities, includin
 
 ## Available Scripts
 
+Runs the app in the development mode.\
+Open [https://devdynamics-dashboard.vercel.app/](https://devdynamics-dashboard.vercel.app/) to view it in the browser.
+
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/moto23/devdynamics-dashboard.git
+
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [https://devdynamics-dashboard.vercel.app/](https://devdynamics-dashboard.vercel.app/) to view it in the browser.
+Install dependencies:
+
+### `npm install`
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
